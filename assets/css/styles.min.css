@@ -225,7 +225,7 @@ text-transform: uppercase;
   max-width: 40px;
   font-size: 12px;
   transition: 0.2s;
-  font-weight: 400;
+  font-weight: 300;
   padding: 10px 3px;
   text-transform: uppercase;
   position: absolute;
@@ -233,6 +233,7 @@ text-transform: uppercase;
   cursor: pointer;
 }
 .post-menu a{
+  font-weight: 300;
   color:#fff!important;
 }
 .post-menu:hover{
