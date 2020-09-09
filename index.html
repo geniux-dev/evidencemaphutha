@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Evidence Maphutha(Portfolio) </title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/line-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+    
+</head>
+
+<body>
+    <div class="menu-btn" onclick="menutoggle()"><i class="fas fa-ellipsis-v"></i><span>MENU</span></div>
+    <div id="blurBG">
+        <div class="social-buttons" id="menubar">
+            <a href="#" onclick="view_tab('profile')" id="profileTab"><i class="icon-user"></i><span>PROFILE</span></a>
+            <a href="#" onclick="view_tab('projects')" id="projectTab"><i class="fas fa-code"></i><span>PROJECTS</span></a>
+            <a href="#" onclick="view_tab('cv')" id="cvTab"><i class="fas fa-file-pdf"></i><span>MY CV</span></a>
+            <a href="#" onclick="view_tab('')"><i class="fab fa-linkedin-in"></i><span>LinkedIn</span></a>
+            <a href="#" id="toggleBTN" onclick="menutoggle()"><i class="la la-arrow-left" style="background: #F44336;"></i><span>HIDE BAR</span></a>
+        </div>
+        <div class="contents-center" id="contents">
+            
+        </div>
+    </div>
+    
+    <div>
+        
+    </div>
+    
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script>
+        function view_tab(d){
+            $('#profileTab').removeClass('active');
+            $('#projectTab').removeClass('active');
+            $('#cvTab').removeClass('active');
+            if(d=="profile"){
+                $('.contents-center').html('<div class="loader-p"><div class="ld ld-ring ld-spin"></div></div>');
+                var delayInMilliseconds = 700;  
+                    setTimeout(function() {
+                    $('.contents-center').load('contents/profile.html',{});
+                }, delayInMilliseconds);
+            }
+            if(d=="projects"){
+                $('.contents-center').html('<div class="loader-p"><div class="ld ld-ring ld-spin"></div> </div>');
+                var delayInMilliseconds = 700;  
+                    setTimeout(function() {
+                    $('.contents-center').load('contents/projects.html',{});
+                }, delayInMilliseconds);
+            }
+            if(d=="cv"){
+                $('.contents-center').html('<div class="loader-p"><div class="ld ld-ring ld-spin"></div> </div>');
+                var delayInMilliseconds = 700;  
+                    setTimeout(function() {
+                    $('.contents-center').load('contents/cv.html',{});
+                }, delayInMilliseconds);
+            }
+        }
+
+        function menutoggle(){
+            var menubar = document.getElementById('menubar');
+            if(menubar.style.cssText=="transform: translateX(0%);" || menubar.style.cssText==""){
+                menubar.style.cssText = "transform: translateX(-115%);"
+
+            }else{
+                menubar.style.cssText = "transform: translateX(0%);";
+            }
+        }
+        $(document).ready(function(){
+            view_tab('profile');
+        });
+
+    </script>
+</body>
+
+<div class="modal fade" id="geniuxhub" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="geniuxhub" aria-modal="true" style="">
+	<div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLongTitle">GeniuXHub</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">×</span>
+				</button>
+			</div>
+			<div class="modal-body">
+			
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="geniuxmusic" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="geniuxhub" aria-modal="true" style="">
+	<div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLongTitle">GeniuXMusic (Mobile Application)</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">×</span>
+				</button>
+			</div>
+			<div class="modal-body">
+                <video controls>
+                    <source src="assets/files/geniuxmusic.mp4" type="video/mp4">
+                </video>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="geniuxadminpanel" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="geniuxhub" aria-modal="true" style="">
+	<div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLongTitle">GeniuXMusic Admin Panel (Dashboard)</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">×</span>
+				</button>
+			</div>
+			<div class="modal-body">
+                <video controls>
+                    <source src="assets/files/geniuxadminpanel.mp4" type="video/mp4">
+                </video>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="geniuxcars" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="geniuxhub" aria-modal="true" style="">
+	<div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLongTitle">My Cars (Mobile/Dashboard Responsive)</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">×</span>
+				</button>
+			</div>
+			<div class="modal-body">
+                <video controls>
+                    <source src="assets/files/mycars.mp4" type="video/mp4">
+                </video>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="geniuxadz" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="geniuxhub" aria-modal="true" style="">
+	<div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLongTitle">Geniux Adz (Mobile Application)</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">×</span>
+				</button>
+			</div>
+			<div class="modal-body">
+                <video controls>
+                    <source src="assets/files/GeniuxAdz.mp4" type="video/mp4">
+                </video>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="geniuxjobs" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="geniuxhub" aria-modal="true" style="">
+	<div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLongTitle">Geniux Jobs (Mobile Application)</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">×</span>
+				</button>
+			</div>
+			<div class="modal-body">
+                <video controls>
+                    <source src="assets/files/GeniuxJob.mp4" type="video/mp4">
+                </video>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="hireme" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="geniuxhub" aria-modal="true" style="">
+	<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLongTitle">How do you wanna communicate?</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">×</span>
+				</button>
+			</div>
+			<div class="modal-body">
+                <div class="card-h">
+                    <div class="u-pic bg-primary"><i class=" fas fa-phone-alt"></i></div>
+                    <div class="u-details">
+                        <span>Phone</span><br>
+                        <span class="span2">(+27) 818756856</span>
+                    </div>
+                    <div class="post-menu leftBTN">
+                        <span class="blueCl" >Call Me</span>                   
+                    </div>
+                </div>
+                <div class="card-h">
+                    <div class="u-pic bg-success"><i class=" fab fa-whatsapp"></i></div>
+                    <div class="u-details">
+                        <span>
+                            WhatsApp                    
+                        </span><br>
+                        <span class="span2">(+27) 818756856</span>
+                    </div>
+                    <div class="post-menu leftBTN">
+                        <a class="blueCl" onclick="window.location.href='user.php?userId=251111995'">Message Me</a>                   
+                    </div>
+                </div>
+                <div class="card-h">
+                    <div class="u-pic bg-danger"><i class="fas fa-envelope"></i></div>
+                    <div class="u-details">
+                        <span>
+                            Email                    
+                        </span><br>
+                        <span class="span2">evidencemaphutha2@gmail.com</span>
+                    </div>
+                    <div class="post-menu leftBTN">
+                        <a class="blueCl" href="mailto:evidencemaphutha2@gmail.com" target="_blank">Email Me</a>                   
+                    </div>
+                </div>
+                <div class="card-h mb-5">
+                    <div class="u-pic bg-primary"><i class=" fab fa-linkedin-in"></i></div>
+                    <div class="u-details">
+                        <span>
+                            LinkedIn                   
+                        </span><br>
+                        <span class="span2">https://www.linkedin.com/in/evidence-maphutha-6766b9131/</span>
+                    </div>
+                    <div class="post-menu leftBTN">
+                        <a class="blueCl" href="https://www.linkedin.com/in/evidence-maphutha-6766b9131/" target="_blank">Link Me</a>                   
+                    </div>
+                </div>
+               
+			</div>
+		</div>
+	</div>
+</div>
+
+</html>
