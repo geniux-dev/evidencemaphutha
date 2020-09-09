@@ -221,6 +221,7 @@ text-transform: uppercase;
   text-decoration: none;
   text-align: center;
   width: 100%;
+  color:#fff!important;
   max-width: 40px;
   font-size: 12px;
   transition: 0.2s;
@@ -230,6 +231,9 @@ text-transform: uppercase;
   position: absolute;
   right: 0;
   cursor: pointer;
+}
+.post-menu a{
+  color:#fff!important;
 }
 .post-menu:hover{
     background: #206bb3;
