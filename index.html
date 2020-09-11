@@ -12,21 +12,18 @@
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/tabicon.png" />
     <link rel="stylesheet" href="assets/css/styles.min.css">
     <meta name="title" content="Evidence Maphutha">
+    <meta name="author" content="Evidence Maphutha">
     <meta name="description" content="I'm an innovative Front/Backend Web Developer.">
     <meta name="keywords" content="I'm an innovative Front/Backend Web Developer.">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="language" content="English">
+    <meta property="og:image" content="assets/img/evidence_selfie.jpg">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Evidence Maphutha">
     <meta property="og:description" content="I'm an innovative Front/Backend Web Developer.">
-    <meta property="twitter:title" content="Evidence Maphutha">
-    <meta property="twitter:description" content="I'm an innovative Front/Backend Web Developer.">
-    <meta property="twitter:image" content="assets/img/evidence_selfie.jpg">
-    <meta name="author" content="Evidence Maphutha">
-    <meta name="theme-color" content="#11171f">
-    <meta name="msapplication-navbutton-color" content="#11171f">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#11171f">
-        
+    <meta name="theme-color" content="#10151b">
+    <meta name="msapplication-navbutton-color" content="#10151b">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#10151b">
 </head>
 
 <body>
@@ -47,45 +44,7 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script>
-        function view_tab(d){
-            $('#profileTab').removeClass('active');
-            $('#projectTab').removeClass('active');
-            $('#cvTab').removeClass('active');
-            if(d=="profile"){
-                $('.contents-center').html('<div class="loader-p"><div class="ld ld-ring ld-spin"></div></div>');
-                var delayInMilliseconds = 700;  
-                    setTimeout(function() {
-                    $('.contents-center').load('contents/profile.html');
-                }, delayInMilliseconds);
-            }
-            if(d=="projects"){
-                $('.contents-center').html('<div class="loader-p"><div class="ld ld-ring ld-spin"></div> </div>');
-                var delayInMilliseconds = 700;  
-                    setTimeout(function() {
-                    $('.contents-center').load('contents/projects.html');
-                }, delayInMilliseconds);
-            }
-            if(d=="cv"){
-                $('.contents-center').html('<div class="loader-p"><div class="ld ld-ring ld-spin"></div> </div>');
-                var delayInMilliseconds = 700;  
-                    setTimeout(function() {
-                    $('.contents-center').load('contents/cv.html');
-                }, delayInMilliseconds);
-            }
-        }
-
-        function menutoggle(){
-            var menubar = document.getElementById('menubar');
-            if(menubar.style.cssText=="transform: translateX(0%);" || menubar.style.cssText==""){
-                menubar.style.cssText = "transform: translateX(-115%);"
-
-            }else{
-                menubar.style.cssText = "transform: translateX(0%);";
-            }
-        }
-        $(document).ready(function(){
-            view_tab('profile');
-        });
+        
 
     </script>
 </body>
